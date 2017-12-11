@@ -2,6 +2,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Hello from '@/components/Hello'
 import Post from '@/components/Post'
+import vueMoment from 'vue-moment'
+
+Vue.use(vueMoment)
 
 Vue.use(Router)
 

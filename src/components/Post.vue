@@ -1,7 +1,20 @@
 <template>
   <div>
-    <h2>Links</h2>
-    <vue-markdown v-if="Post">{{Post.content}}</vue-markdown>
+    <article v-if="Post" data-name="article-full-bleed-background">
+      <div class="cf">
+        <div class="pa3 pa4-ns bg-white black-70 f3 times">
+          <div class="bb b--black-70 pv4">
+            <h3 class="f2 fw7 ttu tracked lh-title mt0 mb3 avenir">{{Post.title}}</h3>
+            <h4 class="f3 fw4 i lh-title mt0">{{Post.createdAt | moment("dddd, MMMM Do YYYY")}}</h4>
+          </div>
+          <section class="pt5 pb4">
+            <p class="times lh-copy f4 mt0">
+              <vue-markdown>{{Post.content}}</vue-markdown>
+            </p>
+          </section>
+        </div>
+      </div>
+    </article>
   </div>
 </template>
 

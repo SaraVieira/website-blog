@@ -6,12 +6,11 @@ export const POST_QUERY = gql`
       id
       title
       content
+      createdAt
       coverImage {
         url
-        id
         width
         height
-        createdAt
       }
     }
   }

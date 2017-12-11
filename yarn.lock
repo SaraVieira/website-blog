@@ -3515,6 +3515,10 @@ mkdirp@0.5.1, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0, mkd
   dependencies:
     minimist "0.0.8"
 
+moment@^2.11.1:
+  version "2.19.4"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.19.4.tgz#17e5e2c6ead8819c8ecfad83a0acccb312e94682"
+
 ms@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
@@ -5298,6 +5302,10 @@ vue-apollo@^3.0.0-alpha.2:
     lodash.omit "^4.5.0"
     lodash.throttle "^4.1.1"
 
+vue-date-filter@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/vue-date-filter/-/vue-date-filter-1.0.1.tgz#bc47ac7333fda5020d87d8137cb6465fd43a6d21"
+
 vue-hot-reload-api@^2.2.0:
   version "2.2.4"
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.2.4.tgz#683bd1d026c0d3b3c937d5875679e9a87ec6cd8f"
@@ -5337,6 +5345,12 @@ vue-markdown@^2.2.4:
     markdown-it-sup "^1.0.0"
     markdown-it-task-lists "^2.0.1"
     markdown-it-toc-and-anchor "^4.1.2"
+
+vue-moment@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/vue-moment/-/vue-moment-3.1.0.tgz#93ec4cc5909ca1e55b81d672dd7b6f2f103c939d"
+  dependencies:
+    moment "^2.11.1"
 
 vue-router@^3.0.1:
   version "3.0.1"
