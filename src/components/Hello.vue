@@ -1,6 +1,6 @@
 <template>
     <div class="">
-      <h2 class="athelas ph3 ph0-l">News</h2>
+      <h2 class="athelas ph3 ph0-l">Articles</h2>
         <h2 class="f5 f4-m f3-l fw2 black-50 mt0 lh-copy" v-if="loading">Loading..
       </h2>
       <article v-if="allPosts.lenght !== 0"

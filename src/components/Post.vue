@@ -15,15 +15,20 @@
         </div>
       </div>
     </article>
-    <form method="POST" action="https://api.staticman.net/v2/entry/SaraVieira/website-blog/master">
-      <input name="options[redirect]" type="hidden" value="https://my-site.com">
-      <!-- e.g. "2016-01-02-this-is-a-post" -->
-      <input name="options[slug]" type="hidden" :value="Post.slug">
-      <label><input name="fields[name]" type="text">Name</label>
-      <label><input name="fields[email]" type="email">E-mail</label>
-      <label><textarea name="fields[message]"></textarea>Message</label>
-
-      <button type="submit">Go!</button>
+    <form method="POST" class="pa4 black-80" action="https://api.staticman.net/v2/entry/SaraVieira/website-blog/master">
+        <div class="measure">
+          <label for="name" class="f6 b db mb2">Name</label>
+          <input id="name" name="fields[name]"  required class="input-reset ba b--black-20 pa2 mb2 db w-100" type="text" />
+        </div>
+        <div class="measure">
+          <label for="email" class="f6 b db mb2">Email</label>
+          <input id="email" email="fields[email]" required class="input-reset ba b--black-20 pa2 mb2 db w-100" type="text" />
+        </div>
+        <div class="measure">
+          <label for="message" class="f6 b db mb2">Message</label>
+          <textarea id="message" message="fields[message]"  required class="input-reset ba b--black-20 pa2 mb2 db w-100" type="text" />
+        </div>
+      <a class="f6 link dim ba ph3 pv2 mb2 dib dark-green" type="submit">Go!</a>
     </form>
   </div>
 </template>

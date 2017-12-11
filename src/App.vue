@@ -1,8 +1,16 @@
 <template>
   <div id="app">
-    <header>
-      <span>Vue.js PWA</span>
-    </header>
+    <nav class="dt w-100 border-box pa3 ph5-ns">
+      <a class="dtc v-mid mid-gray link dim w-25" href="#" title="Home">
+        <img src="https://iamsaravieira.com/media/logo.dfbf532b.svg" class="dib w2 h2" alt="Site Name">
+      </a>
+      <div class="dtc v-mid w-75 tr">
+        <a class="link dim dark-gray f6 f5-ns dib mr3 mr4-ns" href="https://iamsaravieira.com" title="Portfolio">Portfolio</a>
+        <a class="link dim dark-gray f6 f5-ns dib mr3 mr4-ns" href="/" title="Blog">Blog</a>
+        <a class="link dim dark-gray f6 f5-ns dib mr3 mr4-ns" href="https://github.com/SaraVieira/" title="Github">Github</a>
+        <a class="link dim dark-gray f6 f5-ns dib" href="https://twitter.com/NikkitaFTW" title="Github">Twitter</a>
+      </div>
+    </nav>
     <main>
       <router-view></router-view>
     </main>
@@ -31,24 +39,5 @@ main {
   margin-top: 40px;
   max-width: 80%;
   margin: auto;
-}
-
-header {
-  margin: 0;
-  height: 56px;
-  padding: 0 16px 0 24px;
-  background-color: #35495E;
-  color: #ffffff;
-}
-
-header span {
-  display: block;
-  position: relative;
-  font-size: 20px;
-  line-height: 1;
-  letter-spacing: .02em;
-  font-weight: 400;
-  box-sizing: border-box;
-  padding-top: 16px;
 }
 </style>
