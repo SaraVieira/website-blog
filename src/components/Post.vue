@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <article v-if="Post" data-name="article-full-bleed-background">
+  <div v-if="Post">
+    <article data-name="article-full-bleed-background">
       <div class="cf">
         <div class="pa3 pa4-ns bg-white black-70 f3 times">
           <div class="bb b--black-70 pv4">
@@ -49,6 +49,7 @@ export default {
   apollo: {
     Post: {
       query: POST_QUERY,
+      prefetch: true,
       variables () {
         return {
           slug: this.$route.params.slug

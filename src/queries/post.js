@@ -8,6 +8,7 @@ export const POST_QUERY = gql`
       content
       createdAt
       coverImage {
+        id
         url
         width
         height

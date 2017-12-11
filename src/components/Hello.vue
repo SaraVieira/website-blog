@@ -8,7 +8,7 @@
       :key="post.id" class="pv4 bt bb b--black-10 ph3 ph0-l">
       <div class="flex flex-column flex-row-ns">
         <div class="w-100 w-60-ns pr3-ns order-2 order-1-ns">
-          <h1 class="f3 athelas mt0 lh-title">{{post.title}}</h1>
+          <h1 class="f3 athelas mt0 lh-title"><router-link :to="post.slug" class="link f3 athelas mt0 lh-title near-black">{{post.title}}</router-link></h1>
           <p class="f5 f4-l lh-copy athelas">
             {{post.intro}}
           </p>
@@ -35,6 +35,7 @@ export default {
   apollo: {
     allPosts: {
       query: ALL_POSTS_QUERY,
+      prefetch: true,
       loadingKey: 'loading'
     }
   }
