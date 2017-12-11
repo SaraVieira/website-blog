@@ -15,7 +15,7 @@
         </div>
       </div>
     </article>
-    <form method="POST" action="https://api.staticman.net/v2/entry/saravieira/website-blog/master">
+    <form method="POST" action="https://api.staticman.net/v2/entry/SaraVieira/website-blog/master">
       <input name="options[redirect]" type="hidden" value="https://my-site.com">
       <!-- e.g. "2016-01-02-this-is-a-post" -->
       <input name="options[slug]" type="hidden" :value="Post.slug">
