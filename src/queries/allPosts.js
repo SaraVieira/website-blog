@@ -5,15 +5,11 @@ export const ALL_POSTS_QUERY = gql`
     allPosts {
       id
       title
-      content
-      intro,
+      intro
       slug
       coverImage {
         url
         id
-        width
-        height
-        createdAt
       }
     }
   }

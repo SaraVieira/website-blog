@@ -15,18 +15,19 @@
         </div>
       </div>
     </article>
-    <form method="POST" class="pa4 black-80" action="https://api.staticman.net/v2/entry/SaraVieira/website-blog/master/comments">
+    <form class="pa4 black-80" v-on:submit.prevent="addComment">
+    <input name="options[slug]" type="hidden" :value="Post.slug">
         <div class="measure">
           <label for="name" class="f6 b db mb2">Name</label>
-          <input id="name" name="fields[name]"  required class="input-reset ba b--black-20 pa2 mb2 db w-100" type="text" />
+          <input id="name" v-model="name"  required class="input-reset ba b--black-20 pa2 mb2 db w-100" type="text" />
         </div>
         <div class="measure">
           <label for="email" class="f6 b db mb2">Email</label>
-          <input id="email" name="fields[email]" required class="input-reset ba b--black-20 pa2 mb2 db w-100" type="text" />
+          <input id="email" v-model="email" required class="input-reset ba b--black-20 pa2 mb2 db w-100" type="text" />
         </div>
         <div class="measure">
           <label for="message" class="f6 b db mb2">Message</label>
-          <textarea id="message" name="fields[message]"  required class="input-reset ba b--black-20 pa2 mb2 db w-100" type="text" />
+          <textarea id="message" v-model="message"  required class="input-reset ba b--black-20 pa2 mb2 db w-100" type="text" />
         </div>
       <button class="f6 link dim ba ph3 pv2 mb2 dib dark-green" type="submit">Go!</button>
     </form>
@@ -36,6 +37,7 @@
 <script>
 import { POST_QUERY } from '../queries/post'
 import VueMarkdown from 'vue-markdown'
+import axios from 'axios'
 export default {
   components: {
     VueMarkdown
@@ -43,7 +45,26 @@ export default {
   name: 'single-page',
   data () {
     return {
-      loading: 0
+      loading: 0,
+      buttonLoading: false,
+      name: '',
+      email: '',
+      message: '',
+      addComment () {
+        const fields = {
+          name: this.name,
+          email: this.email,
+          message: this.email
+        }
+        this.buttonLoading = true
+
+        axios.post('https://api.staticman.net/v2/entry/SaraVieira/website-blog/master/comments', { fields })
+          .then(data => {
+            this.buttonLoading = false
+
+            console.log(data)
+          })
+      }
     }
   },
   apollo: {
