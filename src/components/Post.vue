@@ -15,20 +15,20 @@
         </div>
       </div>
     </article>
-    <form method="POST" class="pa4 black-80" action="https://api.staticman.net/v2/entry/SaraVieira/website-blog/master">
+    <form method="POST" class="pa4 black-80" action="https://api.staticman.net/v2/entry/SaraVieira/website-blog/master/comments">
         <div class="measure">
           <label for="name" class="f6 b db mb2">Name</label>
           <input id="name" name="fields[name]"  required class="input-reset ba b--black-20 pa2 mb2 db w-100" type="text" />
         </div>
         <div class="measure">
           <label for="email" class="f6 b db mb2">Email</label>
-          <input id="email" email="fields[email]" required class="input-reset ba b--black-20 pa2 mb2 db w-100" type="text" />
+          <input id="email" name="fields[email]" required class="input-reset ba b--black-20 pa2 mb2 db w-100" type="text" />
         </div>
         <div class="measure">
           <label for="message" class="f6 b db mb2">Message</label>
-          <textarea id="message" message="fields[message]"  required class="input-reset ba b--black-20 pa2 mb2 db w-100" type="text" />
+          <textarea id="message" name="fields[message]"  required class="input-reset ba b--black-20 pa2 mb2 db w-100" type="text" />
         </div>
-      <a class="f6 link dim ba ph3 pv2 mb2 dib dark-green" type="submit">Go!</a>
+      <button class="f6 link dim ba ph3 pv2 mb2 dib dark-green" type="submit">Go!</button>
     </form>
   </div>
 </template>
